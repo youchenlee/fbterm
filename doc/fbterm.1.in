@@ -99,7 +99,7 @@ keyboard:
   SHIFT_PAGEDOWN:  history scroll down
   CTRL_ALT_F1:                 switch to encoding of current locale
   CTRL_ALT_F2 to CTRL_ALT_F6:  switch to additional encodings
-  CTRL_SPACE:    toggle input method
+  ALT_SPACE:    toggle input method
   CTRL_ALT_K:    kill input method server
 
 mouse:
@@ -180,7 +180,7 @@ Instead of adding input method directly in FbTerm, a client-server based input m
 this work. FbTerm acts as a client, standalone IM program as a server, and they run in separated processes.
 
 As a normal IM user, you should install a IM program written for FbTerm, and specify it as the value of option "\fIinput-method\fR".
-CTRL_SPACE is the shortcut to activate/deactivate input method. And CTRL_ALT_K may be used to kill the IM program when it has freezed. 
+ALT_SPACE is the shortcut to activate/deactivate input method. And CTRL_ALT_K may be used to kill the IM program when it has freezed. 
 
 .SH "SECURITY NOTES"
 FbTerm tries to change linux kernel key map table to setup shortcuts, which requires \fISYS_TTY_CONFIG\fR capability since kernel

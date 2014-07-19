@@ -102,6 +102,7 @@ void TtyInput::setupSysKey(bool restore)
 	#define T_SHIFT (1 << KG_SHIFT)
 	#define T_CTRL (1 << KG_CTRL)
 	#define T_CTRL_ALT ((1 << KG_CTRL) + (1 << KG_ALT))
+	#define T_ALT (1 << KG_ALT)
 
 	static bool syskey_saved = false;
 	static struct KeyEntry {
@@ -115,6 +116,7 @@ void TtyInput::setupSysKey(bool restore)
 		{T_SHIFT,    KEY_LEFT,	   SHIFT_LEFT},
 		{T_SHIFT,    KEY_RIGHT,    SHIFT_RIGHT},
 		{T_CTRL,     KEY_SPACE,    CTRL_SPACE},
+		{T_ALT,      KEY_SPACE,    ALT_SPACE},
 		{T_CTRL_ALT, KEY_1,        CTRL_ALT_1},
 		{T_CTRL_ALT, KEY_2,        CTRL_ALT_2},
 		{T_CTRL_ALT, KEY_3,        CTRL_ALT_3},
@@ -146,7 +148,7 @@ void TtyInput::setupSysKey(bool restore)
 
 	for (u32 i = 0; i < sizeof(sysKeyTable) / sizeof(KeyEntry); i++) {
 		if (!imapp[0]
-				&& (sysKeyTable[i].new_val == CTRL_SPACE
+				&& (sysKeyTable[i].new_val == ALT_SPACE
 					|| sysKeyTable[i].new_val == CTRL_ALT_K)) continue;
 
 		kbentry entry;

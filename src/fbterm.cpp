@@ -261,7 +261,7 @@ void FbTerm::processSysKey(u32 key)
 		}
 		break;
 
-	case CTRL_SPACE:
+	case ALT_SPACE:
 		if (manager->activeShell()) {
 			manager->activeShell()->toggleIm();
 		}
